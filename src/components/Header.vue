@@ -4,11 +4,15 @@
         <router-link to="/" class="navbar-brand">Stock trader</router-link>
 
         <!-- Links -->
-        <ul class="navbar-nav">
-                <router-link to="/portfolio"  class="nav-item" activeClass="active" tag="li"><a class="nav-link">Portfolio</a> </router-link>
-                <router-link to="/stocks" class="nav-item" activeClass="active" tag="li"><a class="nav-link">Stocks</a> </router-link>
+        <ul class="navbar-nav mr-auto">
+            <router-link to="/portfolio"  class="nav-item" activeClass="active" tag="li"><a class="nav-link">Portfolio</a> </router-link>
+            <router-link to="/stocks" class="nav-item" activeClass="active" tag="li"><a class="nav-link">Stocks</a> </router-link>
         </ul>
-        <strong class="text-white"> Funds : {{funds}}</strong>
+        <span class="navbar-text">
+         <strong class="text-white"> Funds : ${{funds}}</strong>
+        </span>
+
+        <a href="#" class="nav-link"  @click="endDay">End Day</a>
     </nav>
 </template>
 
@@ -23,7 +27,7 @@
         },
         methods:{
             ...mapActions([
-               'randomizeStocks'
+                'randomizeStocks'
             ]),
             endDay(){
                 this.randomizeStocks();
