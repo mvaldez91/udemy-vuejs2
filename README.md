@@ -1,3 +1,4 @@
+
 # final-project
 
 ## Project setup
@@ -27,3 +28,7 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# udemy-vuejs2
+Udemy VueJS 2 Course Final Project
+
